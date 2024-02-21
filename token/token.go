@@ -28,5 +28,15 @@ const (
 	FUNCTION = "FUNCTION"
 	LET = "LET"
 )
-// lexer can later have a buffer or save feature, maybe a cache?
-// can also include line number and filenames within the process of tokenizing
+
+var keywords = map[string]TokenType {
+	"fn": FUNCTION,
+	"let": LET,
+}
+
+func LookupIdent(ident string) TokenType {
+	if tok, ok := keywords[ident]; ok {
+		return tok
+	}
+	return IDENT
+}
