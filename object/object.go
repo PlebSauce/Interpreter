@@ -1,9 +1,9 @@
 package object
 
 import (
+	"Projects/Interpreter/ast"
 	"bytes"
 	"fmt"
-	"projects/Interpreter/ast"
 	"strings"
 )
 

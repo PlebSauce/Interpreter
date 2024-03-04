@@ -7,6 +7,8 @@ import (
 	"os/user"
 )
 
+// when implementing in a different language like C, we need to make our own garbage collector
+// Go has a GC built in for us, research this later
 func main() {
 	user, err := user.Current()
 	if err != nil {
